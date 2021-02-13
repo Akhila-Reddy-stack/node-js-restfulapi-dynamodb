@@ -1,0 +1,22 @@
+{
+  "name": "node-dynamo-db",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js",
+    "ci-start": "node app.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.188.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "excel": "^1.0.1",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "qrcode": "^1.4.4",
+    "serve-favicon": "~2.4.5",
+    "xlsx": "^0.16.9"
+  }
+}
