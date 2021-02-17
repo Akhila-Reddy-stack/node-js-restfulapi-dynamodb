@@ -12,8 +12,8 @@ var users = [];
 users = [
   {
     id: 1,
-    username: "test",
-    password: "test",
+    username: "testuser",
+    password: "user@123",
     firstName: "Test",
     lastName: "User",
   },
@@ -46,13 +46,6 @@ async function authenticate(req, res) {
 }
 
 async function auth(req, res) {
-  //   console.log("loooo");
-  //   var id = req.body;
-  //   var username = req.body;
-  //   var password = req.body;
-  //   var firstName = req.body;
-  //   var lastName = req.body;
-  //   var usersData = [];
   users.push({
     id: req.body.id,
     username: req.body.username,
@@ -60,8 +53,6 @@ async function auth(req, res) {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
   });
-  //   console.log(users, "usersData");
-
   res.send({ data: users, message: "Data added Sucessfully!" });
 }
 
