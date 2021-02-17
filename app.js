@@ -4,7 +4,6 @@ var express = require('express');
 var path = require('path');
 const bodyParser = require('body-parser');
 var app = express();
-var AWS = require("aws-sdk");
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
@@ -20,7 +19,7 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 const sourceFile = require('./qrgenerator');
 
 app.get('/getQRlist', function (req, res) {
-    res.send({ title: sourceFile })
+    res.send({ data: sourceFile })
 })
 
 app.get('/getQRlistbyItemNumber', function (req, res) {
@@ -35,4 +34,4 @@ app.get('/getQRlistbyItemNumber', function (req, res) {
     res.send({ data: outputData })
 })
 
-app.listen(8000, () => console.log('API listening on port 8000!'))
+// app.listen(4000, () => console.log('API listening on port 8000!'))
